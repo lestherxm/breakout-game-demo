@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+  <title>Breakout Game!</title>
+  <script>
+    // Se carga una imagen personalizada para el @Balon y la @Paleta
+    const ballImage = new Image();
+    ballImage.src = "./assets/img/beach-ball.png";
+
+    const paddleImage = new Image();
+    paddleImage.src = "./assets/img/trampoline.png";
+  </script>
+</head>
+
+<body>
+  <button id="rules-btn" class="btn rules-btn">👀 Reglas</button>
+  <div id="rules" class="rules">
+    <h2>Cómo jugar:</h2>
+    <p>
+      Usa las teclas derecha e izquierda para mover la paleta, hacer rebotar la pelota y romper los bloques.
+    </p>
+    <p>Si pierdes el balón, tu puntuación y los bloques se restablecerán.</p>
+    <button id="close-btn" class="btn">🚀 Cerrar</button>
+  </div>
+  
+  <h1>Breakout Game!</h1>
+  <div class="container-btn-start">
+    <button id="btn-start">⭐ START ⭐</button>
+  </div>
+  
+  <canvas id="canvas" width="900" height="490"></canvas>
+
+  <script src="./assets/js/script.js"></script>
+  <script>
+    // Función para deshabilitar el clic derecho
+    function deshabilitarClicDerecho(e) {
+            e.preventDefault();
+        }
+        // Asignar la función al evento "contextmenu" (clic derecho)
+        //document.addEventListener('contextmenu', deshabilitarClicDerecho);
+    </script>
+  </script>
+</body>
+
+</html>
